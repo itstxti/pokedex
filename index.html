@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="syle.css"
+</head>
+<body>
+    <div class="pokedex-container">
+        
+        <!-- Panel izquierdo -->
+        <div class="left-panel">
+            <!-- Sección superior reorganizada -->
+            <div class="top-section fade-in">
+                <!-- Fila 1 y 2: Nombre y especie a la izquierda, ID a la derecha centrado verticalmente -->
+                <div class="header-row">
+                    <div class="name-species" style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <div class="pokemon-name">Loading...</div>
+                        <div class="species-container">
+                            Loading species...
+                        </div>
+                    </div>
+                    <div class="pokemon-id" style="align-self: center;">#---</div>
+                </div>
+
+                <!-- Separador: linea -->
+                <hr class="separator-line">
+                
+                <!-- Fila 3: Imagen y datos básicos -->
+                <div class="middle-section">
+                    <!-- Columna izquierda: Imagen -->
+                    <div class="image-container">
+                        <button class="shiny-toggle">★</button>
+                        <button class="cry" aria-label="">
+                            <i class="fas fa-volume-up" onclick="playPokemonSound()"></i>
+                        </button>
+                        <div class="shiny-indicator"></div>
+                        
+                    </div>
+                    
+                    <!-- Columna derecha: Tipo, peso y altura -->
+                    <div class="info-container">
+                        <div class="type-badges">
+                            <!-- Tipos se cargarán dinámicamente -->
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <div class="info-label">Height</div>
+                                <div class="info-value">-- m</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-label">Weight</div>
+                                <div class="info-value">-- kg</div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            Loading description...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección media: Estadísticas -->
+            <div class="stats-section fade-in">
+                <div class="section-title">
+                    <i class="fas fa-chart-bar"></i>
+                    Base Stats
+                </div>
+                
+                <div class="stats-container">
+                    <!-- Estadísticas se cargarán dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Sección inferior: Habilidades -->
+            <div class="abilities-section fade-in">
+                <div class="section-title">
+                    <i class="fas fa-star"></i>
+                    Abilities
+                </div>
+                
+                <div class="abilities-container">
+                    <!-- Habilidades se cargarán dinámicamente -->
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <!-- Panel derecho -->
+        <div class="right-panel">
+            <!-- Barra de búsqueda -->
+            <div class="search-container fade-in">
+                <div class="search-title">
+                    <i class="fas fa-search"></i>
+                    Pokémon Search
+                </div>
+                
+                <div class="search-controls">
+                    <select class="region-selector">
+                        <option selected>Kanto (1-151)</option>
+                        <option>Johto (152-251)</option>
+                        <option>Hoenn (252-386)</option>
+                        <option>Sinnoh (387-493)</option>
+                        <option>Unova (494-649)</option>
+                        <option>Kalos (650-721)</option>
+                        <option>Alola (722-809)</option>
+                        <option>Galar (810-898)</option>
+                        <option>Paldea (899-1010)</option>
+                    </select>
+                    
+                    <input type="text" class="search-box" placeholder="Search by name or ID...">
+                    
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Cuadrícula de Pokémon -->
+            <div class="grid-container fade-in">
+                <div class="grid-title">
+                    <i class="fas fa-th-list"></i>
+                    Pokémon
+                </div>
+                
+                <div class="pokemon-grid">
+                    <!-- Pokémon se cargarán dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
